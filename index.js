@@ -41,8 +41,8 @@ export class Question extends React.Component {
                 : 
                 <Text />
             }
-            {/* Optional BUTTON */}
-            {this.props.buttonText ?
+            {/* Optional ACTION */}
+            {this.props.actionText ?
                 <TouchableOpacity 
                     style={[styles.defaultActionStyle, this.props.actionStyle]}
                     onPress={this.props.onClick ? this.props.onClick : null}
@@ -57,11 +57,29 @@ export class Question extends React.Component {
     )}
 }
 
+
 const styles = StyleSheet.create({
-    defaultBulletStyle: {},
-    defaultContainerStyle: {},
-    defaultTitleStyle: {},
-    defaultReplyStyle: {},
-    defaultActionStyle: {},
-    defaultActionTextStyle: {}
+    defaultBulletStyle: {
+        marginLeft: '10%'
+    },
+    defaultContainerStyle: {
+        backgroundColor: 'lightgrey'
+    },
+    defaultTitleStyle: {
+        fontSize: 20
+    },
+    defaultReplyStyle: {
+        fontSize: 15
+    },
+    defaultActionStyle: {
+        backgroundColor: "black",
+        borderRadius: 5,
+        margin: 5
+    },
+    defaultActionTextStyle: {
+        fontSize: 25,
+        color: "white",
+        textAlign: "center"
+    }
 });
+
