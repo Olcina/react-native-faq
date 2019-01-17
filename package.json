@@ -1,10 +1,12 @@
 {
   "name": "react-native-faq",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React Native F.A.Q component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepub" : "",
+    "pub" : ""
   },
   "repository": {
     "type": "git",
