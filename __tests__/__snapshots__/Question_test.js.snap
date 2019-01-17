@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Question renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "lightgrey",
+        "borderRadius": 5,
+        "margin": 2,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    Did I render?
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    It seems so:
+  </Text>
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "textAlign": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "marginLeft": "10%",
+          },
+          undefined,
+        ]
+      }
+    >
+      I'm a bullet
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "marginLeft": "10%",
+          },
+          undefined,
+        ]
+      }
+    >
+      Second Bullet
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "black",
+        "borderRadius": 5,
+        "margin": 5,
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 25,
+            "textAlign": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      I'm ready to help!
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders whitout action 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "lightgrey",
+        "borderRadius": 5,
+        "margin": 2,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    test
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    test
+  </Text>
+  <Text />
+  <Text />
+</View>
+`;

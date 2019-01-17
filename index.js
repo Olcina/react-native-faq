@@ -2,6 +2,44 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+const styles = StyleSheet.create({
+    defaultBulletStyle: {
+        marginLeft: '10%'
+    },
+    defaultContainerStyle: {
+        backgroundColor: 'lightgrey',
+        margin: 2,
+        borderRadius: 5
+    },
+    defaultTitleStyle: {
+        fontSize: 20
+    },
+    defaultReplyStyle: {
+        fontSize: 15
+    },
+    defaultActionStyle: {
+        backgroundColor: "black",
+        borderRadius: 5,
+        margin: 5
+    },
+    defaultActionTextStyle: {
+        fontSize: 25,
+        color: "white",
+        textAlign: "center"
+    },
+    defaultFAQContainerStyle: {
+    },
+    defaultFAQTitleContainerStyle: {
+    },
+    defaultFAQTextStyle: {
+        fontSize: 30,
+        textAlign: 'center'
+    },
+    defaultFAQQuestionContainerStyle: {
+    }
+});
+
+
 export class Question extends React.Component {
     static propTypes = {
         bullets: PropTypes.array,
@@ -15,10 +53,10 @@ export class Question extends React.Component {
     }
 
     renderBullets = () => {
-        return this.props.bullets.map((bullet, key) => {
+        return this.props.bullets.map((bullet, index) => {
             return (
                 <Text
-                    key={key}
+                    key={`${bullet}-${index}`}
                     style={[styles.defaultBulletStyle, this.props.bulletStyle]}
                 >
                     {bullet}
@@ -30,7 +68,7 @@ export class Question extends React.Component {
     render() {
         return (
             <View
-                key={this.props.key}
+                key={this.props.id}
                 style={[styles.defaultContainerStyle, this.props.containerStyle]}>
                 <Text style={[styles.defaultTitleStyle, this.props.titleStyle]}>
                     {this.props.question}
@@ -80,7 +118,8 @@ export class FAQ extends React.Component {
             console.log(index, { ...question });
 
             return <Question
-                key={index}
+                key={`${question.question}-${index}`}
+                id={index}
                 {...question}
             />
         })
@@ -105,40 +144,4 @@ export class FAQ extends React.Component {
 }
 
 
-const styles = StyleSheet.create({
-    defaultBulletStyle: {
-        marginLeft: '10%'
-    },
-    defaultContainerStyle: {
-        backgroundColor: 'lightgrey',
-        margin: 2,
-        borderRadius: 5
-    },
-    defaultTitleStyle: {
-        fontSize: 20
-    },
-    defaultReplyStyle: {
-        fontSize: 15
-    },
-    defaultActionStyle: {
-        backgroundColor: "black",
-        borderRadius: 5,
-        margin: 5
-    },
-    defaultActionTextStyle: {
-        fontSize: 25,
-        color: "white",
-        textAlign: "center"
-    },
-    defaultFAQContainerStyle: {
-    },
-    defaultFAQTitleContainerStyle: {
-    },
-    defaultFAQTextStyle: {
-        fontSize: 30,
-        textAlign: 'center'
-    },
-    defaultFAQQuestionContainerStyle: {
-    }
-});
 
