@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Olcina/react-native-faq.svg?branch=master)](https://travis-ci.com/Olcina/react-native-faq)
+
 # react-native-faq
 React Native F.A.Q.
 
