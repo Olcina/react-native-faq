@@ -1,43 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
-const styles = StyleSheet.create({
-    defaultBulletStyle: {
-        marginLeft: '10%'
-    },
-    defaultContainerStyle: {
-        backgroundColor: 'lightgrey',
-        margin: 2,
-        borderRadius: 5
-    },
-    defaultTitleStyle: {
-        fontSize: 20
-    },
-    defaultReplyStyle: {
-        fontSize: 15
-    },
-    defaultActionStyle: {
-        backgroundColor: "black",
-        borderRadius: 5,
-        margin: 5
-    },
-    defaultActionTextStyle: {
-        fontSize: 25,
-        color: "white",
-        textAlign: "center"
-    },
-    defaultFAQContainerStyle: {
-    },
-    defaultFAQTitleContainerStyle: {
-    },
-    defaultFAQTextStyle: {
-        fontSize: 30,
-        textAlign: 'center'
-    },
-    defaultFAQQuestionContainerStyle: {
-    }
-});
+import { Text, TouchableOpacity, View } from 'react-native';
 
 
 export class Question extends React.Component {
@@ -48,8 +11,10 @@ export class Question extends React.Component {
         containerStyle: PropTypes.object,
         actionStyle: PropTypes.object,
         actionTextStyle: PropTypes.object,
+        replyStyle: PropTypes.object,
+        titleStyle: PropTypes.object,
         onClick: PropTypes.func,
-        key: PropTypes.number
+        // key: PropTypes.number
     }
 
     renderBullets = () => {
@@ -57,7 +22,7 @@ export class Question extends React.Component {
             return (
                 <Text
                     key={`${bullet}-${index}`}
-                    style={[styles.defaultBulletStyle, this.props.bulletStyle]}
+                    style={[this.props.bulletStyle]}
                 >
                     {bullet}
                 </Text>
@@ -69,11 +34,11 @@ export class Question extends React.Component {
         return (
             <View
                 key={this.props.id}
-                style={[styles.defaultContainerStyle, this.props.containerStyle]}>
-                <Text style={[styles.defaultTitleStyle, this.props.titleStyle]}>
+                style={[this.props.containerStyle]}>
+                <Text style={[this.props.titleStyle]}>
                     {this.props.question}
                 </Text>
-                <Text style={[styles.defaultReplyStyle, this.props.replyStyle]}>
+                <Text style={[this.props.replyStyle]}>
                     {this.props.reply}
                 </Text>
                 {/* Optional BULLETS */}
@@ -87,10 +52,10 @@ export class Question extends React.Component {
                 {/* Optional ACTION */}
                 {this.props.actionText ?
                     <TouchableOpacity
-                        style={[styles.defaultActionStyle, this.props.actionStyle]}
+                        style={[this.props.actionStyle]}
                         onPress={this.props.onClick ? this.props.onClick : null}
                     >
-                        <Text style={[styles.defaultActionTextStyle, this.props.actionTextStyle]}>
+                        <Text style={[this.props.actionTextStyle]}>
                             {this.props.actionText}
                         </Text>
                     </TouchableOpacity>
@@ -99,6 +64,34 @@ export class Question extends React.Component {
             </View>
         )
     }
+}
+
+Question.defaultProps = {
+    bullets: null,
+    bulletStyle: {
+        marginLeft: '10%'
+    },
+    containerStyle: {
+        backgroundColor: 'lightgrey',
+        margin: 2,
+        borderRadius: 5
+    },
+    actionStyle: {
+        backgroundColor: "black",
+        borderRadius: 5,
+        margin: 5
+    },
+    actionTextStyle: {
+        fontSize: 30,
+        textAlign: 'center'
+    },
+    replyStyle: {
+        fontSize: 15
+    },
+    titleStyle: {
+        fontSize: 20
+    },
+    onClick: null,
 }
 
 export class FAQ extends React.Component {
@@ -111,15 +104,11 @@ export class FAQ extends React.Component {
         questionContainerStyle: PropTypes.object
     }
 
-
-
     renderQuestions = (questions) => {
         return questions.map((question, index) => {
-            console.log(index, { ...question });
 
             return <Question
                 key={`${question.question}-${index}`}
-                id={index}
                 {...question}
             />
         })
@@ -128,13 +117,13 @@ export class FAQ extends React.Component {
     render() {
         const renderedQuestions = this.renderQuestions(this.props.questions)
         return (
-            <View style={[styles.defaultFAQContainerStyle, this.props.containerStyle]}>
-                <View style={[styles.defaultFAQTitleContainerStyle, this.props.titleContainerStyle]}>
-                    <Text style={[styles.defaultFAQTextStyle, this.props.titleStyle]}>
+            <View style={[this.props.containerStyle]}>
+                <View style={[this.props.titleContainerStyle]}>
+                    <Text style={[this.props.titleStyle]}>
                         {this.props.title}
                     </Text>
                 </View>
-                <View style={[styles.defaultFAQQuestionContainerStyle, this.props.questionContainerStyle]}>
+                <View style={[this.props.questionContainerStyle]}>
                     {renderedQuestions}
                 </View>
             </View>
@@ -143,5 +132,13 @@ export class FAQ extends React.Component {
 
 }
 
-
+FAQ.defaultProps = {
+    containerStyle: {},
+    questionContainerStyle: {},
+    titleContainerStyle: {},
+    titleStyle: {
+        fontSize: 30,
+        textAlign: 'center'
+    }
+}
 

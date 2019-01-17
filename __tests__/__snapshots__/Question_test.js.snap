@@ -9,7 +9,6 @@ exports[`Question renders correctly 1`] = `
         "borderRadius": 5,
         "margin": 2,
       },
-      undefined,
     ]
   }
 >
@@ -19,7 +18,6 @@ exports[`Question renders correctly 1`] = `
         Object {
           "fontSize": 20,
         },
-        undefined,
       ]
     }
   >
@@ -31,7 +29,6 @@ exports[`Question renders correctly 1`] = `
         Object {
           "fontSize": 15,
         },
-        undefined,
       ]
     }
   >
@@ -51,7 +48,6 @@ exports[`Question renders correctly 1`] = `
           Object {
             "marginLeft": "10%",
           },
-          undefined,
         ]
       }
     >
@@ -63,7 +59,6 @@ exports[`Question renders correctly 1`] = `
           Object {
             "marginLeft": "10%",
           },
-          undefined,
         ]
       }
     >
@@ -92,11 +87,9 @@ exports[`Question renders correctly 1`] = `
       style={
         Array [
           Object {
-            "color": "white",
-            "fontSize": 25,
+            "fontSize": 30,
             "textAlign": "center",
           },
-          undefined,
         ]
       }
     >
@@ -115,7 +108,6 @@ exports[`renders whitout action 1`] = `
         "borderRadius": 5,
         "margin": 2,
       },
-      undefined,
     ]
   }
 >
@@ -125,7 +117,6 @@ exports[`renders whitout action 1`] = `
         Object {
           "fontSize": 20,
         },
-        undefined,
       ]
     }
   >
@@ -137,7 +128,6 @@ exports[`renders whitout action 1`] = `
         Object {
           "fontSize": 15,
         },
-        undefined,
       ]
     }
   >
