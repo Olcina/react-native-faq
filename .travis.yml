@@ -1,13 +1,14 @@
 language: node_js
-node_js: 
-  - "stable"
+node_js:
+- stable
 cache:
   directories:
-    - "node_modules"
-
+  - node_modules
 deploy:
+  provider: npm
+  email: karlos.olcina@gmail.com
+  api_key:
+    secure: 2fkGfgLS9Qy0heTr/uk1VO89TG8ogzb0nGi8hRSJ+Vh9CBISJpOzY8G21+jXM//kBQQ2gXJOll2kwuSpOLGQjeYP/qTd4v0BZRzEj6JmyfaAoo2V5qUD0itgC2oVoIgqohw46U1mALJmZX313C6WJz5GE7JkSYC3hid5MXxC8Tb1c1BwvmPbzLqaIcPoTmMMERlr2ldMJ1fKqYAbF93ZgOX5T79F+y6IwUgG1O8jg6kma9ejp4SoeGQexpvp2xGP51KdEl2Wkg0H4FM4PbnyUB5KIyoo3zy0n7aKswxQ9hWOwYbqJ1tDbcGZuiYzZvxQtQLdJ2PLIJsxM36JlFAmotFDpcVHnhX6xblXyTaxbUawKEE08dOqwarWKBE+6tGOWXKROR0tIjDgTBGgatNGFxD1b6ju2FmxVs8bpHOc5/3OgsVXMTBDno2nRg7hrTCv0MJWMVDhiZZ1wScS4Z4TLoxApyFSTl99KimmRBAZQPrASGSnnpN+AVbVHNoamKLRXyF/7hf8kaAwkcBjCM/SnG2BgLuVsmIPpW/6WVMbB1F1MOx8U21XLQxgNZAcirYXr8M59vpV7T9wi/4Z8+spqbLnjiqACyLtmQvvVJm/+7a/HatsorhZBk4VBualojRA6Ina0tQfeMbKHr1UDOa7zn2tJqRYfzfk1CNLWK3ujqI=
   on:
     tags: true
-  provider: npm
-  email: "MY_EMAIL"
-  api_key: "MY_SECRET_TOKEN"
+    repo: Olcina/react-native-faq
