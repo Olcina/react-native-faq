@@ -7,14 +7,45 @@ import { Question } from '../index'
 /**
  * F.A.Q. container
  * It renders and array of questions
+ * each question shoulb be defined according the Question Component.
+ * 
+ * e.g.
+ * 
+ * const questions = [{
+ *   question: "How can I help you?",
+ *        reply: "You have several options to choose:",
+ *        bullets: bullets,
+ *        actionText: "I'm ready to help!",
+ *        onClick: action_example
+ * }]
  */
 export default class FAQ extends React.Component {
     static propTypes = {
+        /**
+        * Style for the main View Component of the F.A.Q.
+        * This view contains the title and questions container
+        */
         containerStyle: PropTypes.object,
+        /**
+        * Style for the View component title container
+        */
         titleContainerStyle: PropTypes.object,
+        /**
+        * Style for the Text component containing the title
+        */
         titleStyle: PropTypes.object,
+        /**
+         * A string for the title of the FAQ
+         */
         title: PropTypes.string,
+        /**
+         * An array containing the Questions to be rendered.
+         */
         questions: PropTypes.array,
+        /**
+        * styles for the View component questions container.
+        *
+        */
         questionContainerStyle: PropTypes.object
     }
 
@@ -47,9 +78,13 @@ export default class FAQ extends React.Component {
 }
 
 FAQ.defaultProps = {
+
     containerStyle: {},
+
     questionContainerStyle: {},
+
     titleContainerStyle: {},
+
     titleStyle: {
         fontSize: 30,
         textAlign: 'center'

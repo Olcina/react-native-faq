@@ -111,7 +111,7 @@
     "filename": "me/olcina/Documents/OpenSourceCollaborations/react-native-faq/components/Question.js"
   },
   {
-    "description": "F.A.Q. container\nIt renders and array of questions",
+    "description": "F.A.Q. container\nIt renders and array of questions\neach question shoulb be defined according the Question Component.\n\ne.g.\n\nconst questions = [{\n  question: \"How can I help you?\",\n       reply: \"You have several options to choose:\",\n       bullets: bullets,\n       actionText: \"I'm ready to help!\",\n       onClick: action_example\n}]",
     "displayName": "FAQ",
     "methods": [
       {
@@ -133,7 +133,7 @@
           "name": "object"
         },
         "required": false,
-        "description": "",
+        "description": "Style for the main View Component of the F.A.Q.\nThis view contains the title and questions container",
         "defaultValue": {
           "value": "{}",
           "computed": false
@@ -144,7 +144,7 @@
           "name": "object"
         },
         "required": false,
-        "description": "",
+        "description": "Style for the View component title container",
         "defaultValue": {
           "value": "{}",
           "computed": false
@@ -155,7 +155,7 @@
           "name": "object"
         },
         "required": false,
-        "description": "",
+        "description": "Style for the Text component containing the title",
         "defaultValue": {
           "value": "{\n    fontSize: 30,\n    textAlign: 'center'\n}",
           "computed": false
@@ -166,21 +166,21 @@
           "name": "string"
         },
         "required": false,
-        "description": ""
+        "description": "A string for the title of the FAQ"
       },
       "questions": {
         "type": {
           "name": "array"
         },
         "required": false,
-        "description": ""
+        "description": "An array containing the Questions to be rendered."
       },
       "questionContainerStyle": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "",
+        "description": "styles for the View component questions container.",
         "defaultValue": {
           "value": "{}",
           "computed": false
