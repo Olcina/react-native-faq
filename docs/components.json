@@ -1,0 +1,192 @@
+[
+  {
+    "description": "QUESTION component",
+    "displayName": "Question",
+    "methods": [
+      {
+        "name": "renderBullets",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "bullets": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "bulletStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    marginLeft: '10%'\n}",
+          "computed": false
+        }
+      },
+      "actionText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "containerStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    backgroundColor: 'lightgrey',\n    margin: 2,\n    borderRadius: 5\n}",
+          "computed": false
+        }
+      },
+      "actionStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    backgroundColor: \"black\",\n    borderRadius: 5,\n    margin: 5\n}",
+          "computed": false
+        }
+      },
+      "actionTextStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    fontSize: 30,\n    textAlign: 'center'\n}",
+          "computed": false
+        }
+      },
+      "replyStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    fontSize: 15\n}",
+          "computed": false
+        }
+      },
+      "titleStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    fontSize: 20\n}",
+          "computed": false
+        }
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    },
+    "filename": "me/olcina/Documents/OpenSourceCollaborations/react-native-faq/components/Question.js"
+  },
+  {
+    "description": "F.A.Q. container\nIt renders and array of questions",
+    "displayName": "FAQ",
+    "methods": [
+      {
+        "name": "renderQuestions",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "questions",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "containerStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "titleContainerStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "titleStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    fontSize: 30,\n    textAlign: 'center'\n}",
+          "computed": false
+        }
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "questions": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": ""
+      },
+      "questionContainerStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    },
+    "filename": "me/olcina/Documents/OpenSourceCollaborations/react-native-faq/components/FAQ.js"
+  }
+]

@@ -3,6 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, TouchableOpacity, View } from 'react-native';
 
+/**
+ * QUESTION component
+ * 
+ */
 export default class Question extends React.Component {
     static propTypes = {
         bullets: PropTypes.array,

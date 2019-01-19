@@ -4,6 +4,10 @@ import { Text, View } from 'react-native';
 import { Question } from '../index'
 
 
+/**
+ * F.A.Q. container
+ * It renders and array of questions
+ */
 export default class FAQ extends React.Component {
     static propTypes = {
         containerStyle: PropTypes.object,

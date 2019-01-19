@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "doc" : "node builddoc.js",
     "prepub": "",
     "pub": ""
   },
@@ -36,8 +37,11 @@
     "@babel/core": "^7.2.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "fs": "^0.0.1-security",
     "jest": "^23.6.0",
     "metro-react-native-babel-preset": "^0.51.1",
+    "path": "^0.12.7",
+    "react-docgen": "^2.21.0",
     "react-test-renderer": "^16.7.0",
     "regenerator-runtime": "^0.13.1"
   },
