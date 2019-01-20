@@ -4,14 +4,50 @@ const reactDocs = require("react-docgen");
 // The React components to load
 const componentFolder = "./components/";
 // Where the JSON file ends up
-const componentJsonPath = "./docs/components.json";
+const componentJsonPath = "./docs/components.md";
+
+const hb = require('handlebars')
+hb.registerHelper('json', function(context) {
+    return JSON.stringify(context)
+})
+hb.registerHelper('replace', function(find,replace, options){
+    var string = options.fn(this);
+    return string.replace(find, replace);
+})
+
+const mdTemplate = `
+{{# each comparray}}
+
+## {{this.filename}}
+
+{{#if description}}{{{description}}}{{/if}}
+ 
+prop | type | default |  description |
+---- | :----: | :-------: | ----------- |
+{{#each this.props}}
+{{@key}} | \`{{this.type.name}}\` | \`{{json this.defaultValue.value }}\` | {{#replace "\n" " "}}{{{ this.description }}}{{/replace}} |
+{{/each}}
+
+{{/each}}
+`;
+
+var template = hb.compile(mdTemplate);
+
+// var result = template(data);
+
+
 const componentDataArray = [];
 function pushComponent(component) {
     componentDataArray.push(component);
 }
+
 function createComponentFile() {
     const componentJsonArray = JSON.stringify(componentDataArray, null, 2);
-    fs.writeFile(componentJsonPath, componentJsonArray, "utf8", (err, data) => {
+  console.log(JSON.parse(componentJsonArray)[0]);
+  const mkdown = template({ comparray: JSON.parse(componentJsonArray) })
+  console.log(mkdown);
+    
+  fs.writeFile(componentJsonPath, mkdown, "utf8", (err, data) => {
         if (err) {
             throw err;
         }

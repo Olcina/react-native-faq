@@ -1,6 +1,6 @@
 {
   "name": "react-native-faq",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Native F.A.Q component",
   "main": "index.js",
   "scripts": {
