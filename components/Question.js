@@ -9,16 +9,43 @@ import { Text, TouchableOpacity, View } from 'react-native';
  */
 export default class Question extends React.Component {
     static propTypes = {
+        /**
+        * An array of strings containing the aditional bullets for the Questions.
+        */
         bullets: PropTypes.array,
+        /**
+        * Each bullet is made of a Text component, use this props to style all bullets.
+        */
         bulletStyle: PropTypes.object,
+        /**
+         * An string inside a Text component for the title.
+         */
         actionText: PropTypes.string,
+        /**
+        * Main Question View component style.
+        */
         containerStyle: PropTypes.object,
+        /**
+        * Question action button style container
+        * It's a Touchable Opacity component containing a Text component
+        */
         actionStyle: PropTypes.object,
+        /**
+        * Text component style for the Question title
+        */
         actionTextStyle: PropTypes.object,
+        /**
+        * Question reply container style
+        */
         replyStyle: PropTypes.object,
+        /**
+        * Question title container style
+        */
         titleStyle: PropTypes.object,
+        /**
+        * onClick prop: Can be any function you want to trigger.
+        */
         onClick: PropTypes.func,
-        // key: PropTypes.number
     }
 
     renderBullets = () => {
@@ -71,54 +98,29 @@ export default class Question extends React.Component {
 }
 
 Question.defaultProps = {
-    /**
-     * An array of strings containing the aditional bullets for the Questions
-     */
     bullets: null,
-    /**
-     * Each bullet is made of a Text component, use this props to style all bullets.
-     */
     bulletStyle: {
         marginLeft: '10%'
     },
-    /**
-     * Main Question View component style.
-     */
     containerStyle: {
         backgroundColor: 'lightgrey',
         margin: 2,
         borderRadius: 5
     },
-    /**
-     * Question action button style container
-     * It's a Touchable Opacity component containing a Text component
-     */
     actionStyle: {
         backgroundColor: "black",
         borderRadius: 5,
         margin: 5
     },
-    /**
-     * Text component style for the Question title
-     */    
     actionTextStyle: {
         fontSize: 30,
         textAlign: 'center'
     },
-    /**
-     * Question reply container style
-     */
     replyStyle: {
         fontSize: 15
     },
-    /**
-     * Question title container style
-     */
     titleStyle: {
         fontSize: 20
     },
-    /**
-     * A javascript function for 
-     */
     onClick: null,
 }
