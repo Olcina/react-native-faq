@@ -10,7 +10,9 @@ import { Question } from '../index'
  * each question shoulb be defined according the Question Component.
  * 
  * e.g.
+ * ```javascript
  * 
+ * //Define some questions
  * const questions = [{
  *   question: "How can I help you?",
  *        reply: "You have several options to choose:",
@@ -18,6 +20,11 @@ import { Question } from '../index'
  *        actionText: "I'm ready to help!",
  *        onClick: action_example
  * }]
+ * 
+ * // Render a FAQ component
+ * 
+ * <FAQ questions=questions />
+ * ```
  */
 export default class FAQ extends React.Component {
     static propTypes = {

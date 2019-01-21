@@ -25,7 +25,7 @@ const mdTemplate = `
 prop | type | default |  description |
 ---- | :----: | :-------: | ----------- |
 {{#each this.props}}
-{{@key}} | \`{{this.type.name}}\` | \`{{json this.defaultValue.value }}\` | {{#replace "\n" " "}}{{{ this.description }}}{{/replace}} |
+{{@key}} | \`{{this.type.name}}\` | \`{{{json this.defaultValue.value }}}\` | {{#replace "\n" " "}}{{{ this.description }}}{{/replace}} |
 {{/each}}
 
 {{/each}}

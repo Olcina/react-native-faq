@@ -1,10 +1,45 @@
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Text, TouchableOpacity, View } from 'react-native';
+import React from "react";
+import PropTypes from "prop-types";
+import { Text, TouchableOpacity, View } from "react-native";
 
 /**
  * QUESTION component
+ * 
+ * Ideally to be render as an array inside the F.A.Q. component,
+ * but can be render alone just.
+ * 
+ * Here you have an example of a question definition:
+ * 
+ * 
+ * 
+ * ```javascript
+ * //First define some bullets
+ *   const bullets = [
+ *     "you could say hello",
+ *     "Open an issue",
+ *     "making a pull request",
+ *     "or give me more ideas to improve this component"]
+ * //Then definy an action (WebBroser is a method from ["expo"](https://docs.expo.io/versions/latest/))
+ * 
+ * const action_example = () => {
+ *    WebBrowser.openBrowserAsync(
+ *        "https://github.com/Olcina/react-native-faq"
+ *    )};
+ *
+ * //Wrap up everything in your quesstion props
+ * const  props  = {
+ *        question: "How can I help you?",
+ *        reply: "You have several options to choose:",
+ *        bullets: bullets,
+ *        actionText: "I'm ready to help!",
+ *        onClick: action_example}
+ * 
+ * //Finally render your question 
+ * 
+ * <Question  {...props} />
+ *    
+ * ```
  * 
  */
 export default class Question extends React.Component {
@@ -74,7 +109,7 @@ export default class Question extends React.Component {
                 </Text>
                 {/* Optional BULLETS */}
                 {this.props.bullets ?
-                    <View style={{ display: 'flex', textAlign: 'center' }}>
+                    <View style={{ display: "flex", textAlign: "center" }}>
                         {this.renderBullets()}
                     </View>
                     :
@@ -100,10 +135,10 @@ export default class Question extends React.Component {
 Question.defaultProps = {
     bullets: null,
     bulletStyle: {
-        marginLeft: '10%'
+        marginLeft: "10%"
     },
     containerStyle: {
-        backgroundColor: 'lightgrey',
+        backgroundColor: "lightgrey",
         margin: 2,
         borderRadius: 5
     },
@@ -114,7 +149,7 @@ Question.defaultProps = {
     },
     actionTextStyle: {
         fontSize: 30,
-        textAlign: 'center'
+        textAlign: "center"
     },
     replyStyle: {
         fontSize: 15
